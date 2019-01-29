@@ -33,7 +33,7 @@ public class VotoCreator {
      *
      * @param voto Objeto referente ao voto do {@link Profissional}.
      */
-    public static void cadastraVoto(Voto voto) {
+    private static void cadastraVoto(Voto voto) {
         List<Voto> votos = getVotosOrDefault(voto);
         votos.add(voto);
         DBMemory.getInstance().getVotos().put(voto.getDataVotacao(), votos);
